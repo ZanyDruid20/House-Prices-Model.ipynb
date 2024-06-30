@@ -1,0 +1,38 @@
+Title: House Price Prediction Using Machine Learning
+
+Introduction:
+This project aims to predict house prices using various economic indicators and real estate data. The model was developed by leveraging datasets provided in a YouTube tutorial and implementing a machine learning algorithm to forecast future house prices.
+
+Data Sources:
+
+Metro_median_sale_price_uc_sfrcondo_week.csv: Weekly median sale prices of single-family residences and condos in different metropolitan areas.
+MORTGAGE30US.csv: Data on 30-year mortgage rates.
+RRVRUSQ156N.csv: Residential vacancy rates.
+CPIAUCSL.csv: Consumer Price Index (CPI) for All Urban Consumers.
+Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_month.csv: Zillow Home Value Index for different metropolitan areas.
+Methodology:
+
+Data Preprocessing:
+Loaded the datasets into pandas DataFrames.
+Forward-filled missing data in economic indicators to handle missing values.
+Merged the datasets on the appropriate time indices to create a consolidated dataset.
+Feature Engineering:
+Calculated adjusted house prices by accounting for inflation using the CPI.
+Shifted the data to create a 'next_quarter' target variable representing the house prices one quarter into the future.
+Model Development:
+Used a Random Forest Classifier, a type of ensemble learning method, to predict whether the house price will increase in the next quarter.
+Implemented a backtesting approach to evaluate the model performance over time.
+Model Evaluation:
+Evaluated model accuracy and feature importance using permutation importance.
+Machine Learning Algorithm:
+The project utilized a Random Forest Classifier, which is a supervised machine learning algorithm belonging to the ensemble learning category. This algorithm builds multiple decision trees and merges them to obtain a more accurate and stable prediction.
+
+Results:
+The model achieved an accuracy of 65% in predicting whether house prices would increase in the next quarter. The feature importance analysis revealed that 'adjusted_value' was the most significant predictor.
+
+Conclusion:
+This project demonstrates the potential of using economic indicators and real estate data to predict future house prices. The Random Forest model provided valuable insights into the factors influencing house price changes.
+
+References:
+This project was inspired by and built upon the methodology presented in predicting house prices by dataquest(youtube channel).
+
